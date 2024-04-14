@@ -1,19 +1,16 @@
-# Nome do projeto
+# Duoprog
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+Nosso projeto, Duoprog, se inspira na aplicação Duolingo, sendo esta uma plataforma de ensino em diversos idiomas, nosso projeto tem a visão de ensinar programação por meios similares. Projetado para ensinar habilidades de codificação de forma interativa e acessível em diversar linguagens de programação, utiliza o método de propor ao usuário desafios de codificação para progredir em níveis à medida que dominam conceitos fundamentais e avançados.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* César Ferreira Linhares de Andrade
+* Filipe Resende Rodrigues
+* Gabrielle Maia de Andrade Souza
+* Miguel Oliveira Faria
+* Pedro Ivo Barroso Garrido
+* Rafael Lage Batista
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
-
-## Instruções de utilização
-
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+* Pedro Felipe Alves de Oliveira
