@@ -1,0 +1,153 @@
+/*Importando Fonte Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Importando Fonte Open Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Importando Fonte Barlow*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Media Screen para dispositivos small*/
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .border-only {
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+
+/*Media Screen para dispositivos large*/
+@media screen and (min-width: 992px) and (max-width: 1500px) {
+
+.border-only {
+  border-right: 1px solid #e0e0e0; /* Cor e estilo da borda */
+}
+}
+
+/*Media Screen para dispositivos extra-large*/
+@media screen and (min-width: 1501px) {
+  .border-only {
+    border-right: 1px solid #e0e0e0; /* Cor e estilo da borda */
+  }
+  
+  footer{
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url('../images/background.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  font-family: 'Poppins', sans-serif;
+}
+
+/*Header*/
+
+header{
+  background-color: #141416;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+}
+
+.nav-item {
+  list-style: none;
+  background-color: #141416;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #282626;
+}
+
+header buttom{
+  background-color: #797676;
+  color:white;
+}
+
+/*Main*/
+
+body > main > h1{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300; 
+  font-size: 40pt;
+  position: relative;
+}
+
+body > main > h2{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300; 
+  font-size: 20pt;
+}
+
+section{
+  background-color: rgba(0, 0, 0, 0.7);
+  max-width: 1200px;
+}
+
+p.cards{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; 
+  font-size: 10pt;
+  color: #777981;
+}
+
+section > aside > h2{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500; 
+  
+}
+aside > p{
+  font-family: 'Opens-Sans', sans-serif;
+  font-weight: 200; 
+  font-size: 13pt;
+}
+
+h3{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; 
+  font-size: 14pt;
+  color: #6A8DF1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+a, a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
+/*Footer*/
+
+footer{
+  background-color: #141416;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: small;
+}
+
+/*Classes personalizadas*/
+
+.cards-propostas{
+  background-color: #3C3E48;
+  width: 300px;
+  height: 200px;
+}
+
+.btn-comecar{
+  color: #141416;
+  background-color: #91AAF2;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.btn-comecar:hover{
+  color: #ffffff;
+  background-color: #2f364b;
+  border-color: white;
+}
+
+.border-radius-card{
+  border-radius: 10px;
+}
