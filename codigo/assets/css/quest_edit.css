@@ -44,6 +44,13 @@ body{
     color: white;
     background-color: #00000098;
   }
+
   #corpo{
-    background-color: rgb(64, 96, 185);
+    background-color: #253259;
   }
+  #corpo h2 {
+    color: white;
+}
+#corpo p{
+  color: white;
+}
