@@ -18,8 +18,6 @@ body{
 
   nav{
     background-color: #141416;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 500;
   }
 
   ul > li{
@@ -28,6 +26,8 @@ body{
 
 #logo{
     color: white;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
 }
   
   .nav-item {
@@ -53,4 +53,20 @@ body{
 }
 #corpo p{
   color: white;
+}
+
+.deletar{
+  height: 40px;
+}
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+.editarResp{
+  width: 2rem;
+}
+
+ul {
+  list-style-type: none;
 }
