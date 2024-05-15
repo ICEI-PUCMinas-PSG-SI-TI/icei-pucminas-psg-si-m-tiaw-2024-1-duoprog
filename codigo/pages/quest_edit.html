@@ -39,89 +39,64 @@
         <h1 class="text-center mb-0 p-5 border-bottom text-decoration-underline" id="titulo">Edição de questões</h1>
         <div id="corpo" class="px-3 py-2 border border-top-0 border-bottom-0">
             <div id="EspQuests">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="questão border-bottom mt-2">
-                        <div class="d-flex col">
-                            <button class="deletar"><img src="../assets/images/trash_red.png" class="" alt="" width="35"
-                                    height="auto"></button>
-                            <div class="fs-3 ms-2 d-flex justify-content-between">
-                                <h2 class="mt-1">texto placeholder 1</h2>
-                                <button class="ms-2"><img src="../assets/images/iconizer-botao-editar.svg" class=""
-                                        alt="" width="40" height="40"></button>
-                            </div>
-                        </div>
-                        <ul>
-                            <li class="d-flex"><button><img src="../assets/images/iconizer-botao-editar.svg"
-                                        class="editarResp me-2 mb-3" alt=""></button>
-                                <p>pergunta1</p>
-                            </li>
-                            <li class="d-flex"><button><img src="../assets/images/iconizer-botao-editar.svg"
-                                        class="editarResp me-2 mb-3" alt=""></button>
-                                <p>pergunta2</p>
-                            </li>
-                            <li class="d-flex"><button><img src="../assets/images/iconizer-botao-editar.svg"
-                                        class="editarResp me-2 mb-3" alt=""></button>
-                                <p>pergunta3</p>
-                            </li>
-                            <li class="d-flex"><button><img src="../assets/images/iconizer-botao-editar.svg"
-                                        class="editarResp me-2 mb-3" alt=""></button>
-                                <p>pergunta4<p>
-                            </li>
-                        </ul>
+                <div class="container-fluid">
+                    <div class="row">
+
+
                     </div>
-                    <!--a class="questão" servirá para adicionar cada questão-->
-                    <div class="questão border-bottom mt-2">
-                        <div class="d-flex col">
-                            <button class="deletar"><img src="../assets/images/trash_red.png" class="" alt="" width="35"
-                                    height="auto"></button>
-                            <div class="fs-3 ms-2 d-flex justify-content-between">
-                                <h2 class="mt-1">texto placeholder 2</h2>
-                                <button class="ms-2"><img src="../assets/images/iconizer-botao-editar.svg" class=""
-                                        alt="" width="40" height="40"></button>
-                            </div>
-                        </div>
-                        <ul>
-                            <li class="d-flex"><button><img src="../assets/images/iconizer-botao-editar.svg"
-                                        class="editarResp me-2 mb-3" alt=""></button>
-                                <p>Lorem.</p>
-                            </li>
-                            <li class="d-flex"><button><img src="../assets/images/iconizer-botao-editar.svg"
-                                        class="editarResp me-2 mb-3" alt=""></button>
-                                <p>Lorem, ipsum dolor.</p>
-                            </li>
-                            <li class="d-flex"><button><img src="../assets/images/iconizer-botao-editar.svg"
-                                        class="editarResp me-2 mb-3" alt=""></button>
-                                <p>Lorem, ipsum.</p>
-                            </li>
-                            <li class="d-flex"><button><img src="../assets/images/iconizer-botao-editar.svg"
-                                        class="editarResp me-2 mb-3" alt=""></button>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <!--<div class="questão border-bottom mt-2">
-                        <div class="d-flex col mb-2">
-                            <button class="deletar"><img src="../assets/images/trash_red.png" class="" alt="" width="35"
-                                    height="auto"></button>
-                                    <div class="input-group input-group-lg InputPerg">
-                                        <input id="perg" type="text" class="form-control ms-2" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"></div>
-                                    </div>
-                        <ul>
-                            <li><div class="input-group input-group-sm mb-2 InputResp"><span class="input-group-text p-2" id="inputGroup-sizing-sm">1</span><input id="resp1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"></div></li>
-                            <li><div class="input-group input-group-sm mb-2 InputResp"><span class="input-group-text p-2" id="inputGroup-sizing-sm">2</span><input id="resp2" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"></div></li>
-                            <li><div class="input-group input-group-sm mb-2 InputResp"><span class="input-group-text p-2" id="inputGroup-sizing-sm">3</span><input id="resp3" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"></div></li>
-                            <li><div class="input-group input-group-sm mb-2 InputResp"><span class="input-group-text p-2" id="inputGroup-sizing-sm">4</span><input id="resp4" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"></div></li>
-                        </ul>
-                        <button class="d-flex  d-block rounded-pill my-2" id="ConfQuest"><p class="m-1 text-black">confirmar</p><img src="/assets/images/confirmation.png" alt="" class="mx-1 mt-1 AddConfSimb"></button>
-                    </div>-->
-
                 </div>
             </div>
-        </div>
-            <button class="d-flex  d-block border rounded-pill mx-auto mt-5 mb-1" id="AddQuest"><p class="m-1">adicionar nova</p><img src="/assets/images/iconizer-add.svg" alt="" class="mx-1 mt-1 AddConfSimb"></button>
+            <div id="TelaAddQuest" class="border-bottom mt-2" style="display: none;">
+                <div class="d-flex col mb-2">
+                    <button class="deletar"><img src="../assets/images/trash_red.png" class="" alt="" width="35"
+                            height="auto"></button>
+                    <div class="input-group input-group-lg InputPerg">
+                        <input id="InputPerg" type="text" class="form-control ms-2" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-lg">
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <div id="inputGroup-sizing-sm" class="input-group input-group-sm mb-2 InputResp"><span
+                                class="input-group-text p-2">1</span><input id="InputQuest1" type="text"
+                                class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-sm"></div>
+                    </li>
+                    <li>
+                        <div id="inputGroup-sizing-sm" class="input-group input-group-sm mb-2 InputResp"><span
+                                class="input-group-text p-2">2</span><input id="InputQuest2" type="text"
+                                class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-sm"></div>
+                    </li>
+                    <li>
+                        <div id="inputGroup-sizing-sm" class="input-group input-group-sm mb-2 InputResp"><span
+                                class="input-group-text p-2">3</span><input id="InputQuest3" type="text"
+                                class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-sm"></div>
+                    </li>
+                    <li>
+                        <div id="inputGroup-sizing-sm" class="input-group input-group-sm mb-2 InputResp"><span
+                                class="input-group-text p-2">4</span><input id="InputQuest4" type="text"
+                                class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-sm"></div>
+                    </li>
+                </ul>
+                <button class="d-flex d-block rounded-pill my-2" id="BtnConfQuest">
+                    <p class="m-1 text-black">confirmar</p><img src="/assets/images/confirmation.png" alt=""
+                        class="mx-1 mt-1 AddConfSimb">
+                </button>
+                <button class="d-flex d-block rounded-pill my-2" id="BtnCancelQuest">
+                    <p class="m-1 text-black">cancelar</p><img src="/assets/images/cancel-button.png" alt=""
+                        class="mx-1 mt-1 AddConfSimb">
+                </button>
+            </div>
+            <div style="display: block;" id="BtnAddQuestArea">
+                <button class="d-flex d-block border rounded-pill mx-auto mt-5 mb-1"
+                    id="BtnAddQuest">
+                    <p class="m-1">adicionar nova</p><img src="/assets/images/iconizer-add.svg" alt=""
+                        class="mx-1 mt-1 AddConfSimb">
+                </button>
+            </div>
         </div>
     </main>
 
@@ -129,18 +104,25 @@
     <!--footer-->
     <footer class="container-fluid px-5 py-2">
         <div class="row">
-            <p class="col-4 m-auto p-0">Copyright - Todos os Direitos Reservados <br> &copy; 2024 </br></p>
-    
-            <div class="col-4 text-center">
+            <p class="col-lg-4 col-md-4 col-sm-12 m-auto p-0">Copyright - Todos os Direitos Reservados <br> &copy; 2024
+                </br></p>
+
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center my-3" id="footer-separacao">
                 <p class="m-0 ">DUOLINGO PROG</p>
                 <p class="m-0 mt-2 mb-1">Redes Sociais</p>
-    
-                <a href="https://www.instagram.com/" target="_blank"><button type="button" class="btn btn-secondary py-0 pb-1 px-2"><img src="../assets/icons/instagram.svg" alt="Icone que redireciona para o instagram"></button></a>
-                <a href="https://twitter.com/?lang=pt-br" target="_blank"><button type="button" class="btn btn-secondary py-0 pb-1 px-2"><img src="../assets/icons/twitter.svg" alt="Icone que redireciona para o twitter"></button></a>
-                <a href="https://www.youtube.com/?hl=pt-br" target="_blank"><button type="button" class="btn btn-secondary py-0 pb-1 px-2"><img src="../assets/icons/youtube.svg" alt="Icone que redireciona para o youtube"></button></a>
+
+                <a href="https://www.instagram.com/" target="_blank"><button type="button"
+                        class="btn btn-secondary py-0 pb-1 px-2"><img src="../assets/images/instagram.svg"
+                            alt="Icone que redireciona para o instagram"></button></a>
+                <a href="https://twitter.com/?lang=pt-br" target="_blank"><button type="button"
+                        class="btn btn-secondary py-0 pb-1 px-2"><img src="../assets/images/twitter.svg"
+                            alt="Icone que redireciona para o twitter"></button></a>
+                <a href="https://www.youtube.com/?hl=pt-br" target="_blank"><button type="button"
+                        class="btn btn-secondary py-0 pb-1 px-2"><img src="../assets/images/youtube.svg"
+                            alt="Icone que redireciona para o youtube"></button></a>
             </div>
-    
-            <div class="col-4 m-auto p-0 text-end">
+
+            <div class="col-lg-4 col-md-4 col-sm-12 m-auto p-0 text-end ">
                 <p class="m-0">Política de Privacidade <br>Política de Cookies</br></p>
             </div>
         </div>
