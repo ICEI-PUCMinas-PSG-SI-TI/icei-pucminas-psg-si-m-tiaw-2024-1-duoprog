@@ -63,6 +63,8 @@
                             <input type="text" name="txt_cidade" id="txt_cidade" class="col-8 border border-light rounded bg-transparent">
                             <label for="txt_senha" class="col-8 text-start">Senha:</label>
                             <input type="password" name="txt_senha" id="txt_senha" class="col-8 border border-light rounded bg-transparent mb-1">
+                            <label for="txt_senha2" class="col-8 text-start">Confirmar senha:</label>
+                            <input type="password" name="txt_senha2" id="txt_senha2" class="col-8 border border-light rounded bg-transparent mb-1">
                             <button type="submit" class="col-8 mt-3 btn btn-lg btn-sign-up">Cadastrar</button>
                         </form>
                     </div>
@@ -78,10 +80,16 @@
     const idade = document.getElementById('txt_idade').value;
     const cidade = document.getElementById('txt_cidade').value;
     const senha = document.getElementById('txt_senha').value;
+    const senha2 = document.getElementById('txt_senha2').value;
 
-    if (cadastrarUsuario(nome, email, idade, cidade, senha)) {
-        alert("Cadastro realizado com sucesso!");
-        window.location.href = 'login.html';  // Redireciona para a página de login
+    if (cadastrarUsuario(nome, email, idade, cidade, senha, senha2)) {
+        if(senha == senha2) {
+            alert("Cadastro realizado com sucesso!");
+            window.location.href = 'login.html';  // Redireciona para a página de login
+        }
+        else{
+            alert("Oposição entre as senhas. Tente novamente");
+        }
     } else {
         alert("Erro ao cadastrar. Tente novamente.");
     }
@@ -116,5 +124,23 @@
         }
         cadastrarAdmin();
     </script>
+    <footer class="container-fluid px-5 py-2">
+        <div class="row">
+            <p class="col-lg-4 col-md-4 col-sm-12 m-auto p-0">Copyright - Todos os Direitos Reservados <br> &copy; 2024 </br></p>
+    
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center my-3" id="footer-separacao">
+                <p class="m-0 ">DUOLINGO PROG</p>
+                <p class="m-0 mt-2 mb-1">Redes Sociais</p>
+    
+                <a href="https://www.instagram.com/" target="_blank"><button type="button" class="btn btn-secondary py-0 pb-1 px-2"><img src="../assets/images/instagram.svg" alt="Icone que redireciona para o instagram"></button></a>
+                <a href="https://twitter.com/?lang=pt-br" target="_blank"><button type="button" class="btn btn-secondary py-0 pb-1 px-2"><img src="../assets/images/twitter.svg" alt="Icone que redireciona para o twitter"></button></a>
+                <a href="https://www.youtube.com/?hl=pt-br" target="_blank"><button type="button" class="btn btn-secondary py-0 pb-1 px-2"><img src="../assets/images/youtube.svg" alt="Icone que redireciona para o youtube"></button></a>
+            </div>
+    
+            <div class="col-lg-4 col-md-4 col-sm-12 m-auto p-0 text-end ">
+                <p class="m-0">Política de Privacidade <br>Política de Cookies</br></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

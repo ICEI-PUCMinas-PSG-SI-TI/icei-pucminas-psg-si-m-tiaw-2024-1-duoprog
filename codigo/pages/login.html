@@ -51,8 +51,8 @@
                     <h2 class="col-10 my- mx-auto border-bottom border-light p-0 pb-2">Login</h2>
                     <div class="col-12 text-center">
                         <form id="formLogin" class="p-0 mx-auto">
-                            <label for="txt_login" class="col-8 text-start">Login:</label>
-                            <input type="text" name="txt_login" id="txt_login" class="col-8 border border-light rounded bg-transparent">
+                            <label for="txt_nome" class="col-8 text-start">Nome de Usuário:</label>
+                            <input type="text" name="txt_nome" id="txt_nome" class="col-8 border border-light rounded bg-transparent">
                             <label for="txt_senha" class="col-8 text-start">Senha:</label>
                             <input type="password" name="txt_senha" id="txt_senha" class="col-8 border border-light rounded bg-transparent mb-1">
                             <button type="submit" class="col-8 mt-3 btn btn-lg btn-sign-up">Entrar</button>
@@ -65,7 +65,7 @@
     <script>
         document.getElementById('formLogin').addEventListener('submit', function(event) {
             event.preventDefault();
-            const login = document.getElementById('txt_login').value;
+            const login = document.getElementById('txt_nome').value;
             const senha = document.getElementById('txt_senha').value;
 
             if (loginUser(login, senha)) {
@@ -88,5 +88,23 @@
             }
         }
     </script>
+    <footer class="container-fluid px-5 py-2">
+        <div class="row">
+            <p class="col-lg-4 col-md-4 col-sm-12 m-auto p-0">Copyright - Todos os Direitos Reservados <br> &copy; 2024 </br></p>
+    
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center my-3" id="footer-separacao">
+                <p class="m-0 ">DUOLINGO PROG</p>
+                <p class="m-0 mt-2 mb-1">Redes Sociais</p>
+    
+                <a href="https://www.instagram.com/" target="_blank"><button type="button" class="btn btn-secondary py-0 pb-1 px-2"><img src="../assets/images/instagram.svg" alt="Icone que redireciona para o instagram"></button></a>
+                <a href="https://twitter.com/?lang=pt-br" target="_blank"><button type="button" class="btn btn-secondary py-0 pb-1 px-2"><img src="../assets/images/twitter.svg" alt="Icone que redireciona para o twitter"></button></a>
+                <a href="https://www.youtube.com/?hl=pt-br" target="_blank"><button type="button" class="btn btn-secondary py-0 pb-1 px-2"><img src="../assets/images/youtube.svg" alt="Icone que redireciona para o youtube"></button></a>
+            </div>
+    
+            <div class="col-lg-4 col-md-4 col-sm-12 m-auto p-0 text-end ">
+                <p class="m-0">Política de Privacidade <br>Política de Cookies</br></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
