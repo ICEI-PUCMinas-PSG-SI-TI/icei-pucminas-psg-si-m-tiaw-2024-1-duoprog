@@ -98,6 +98,9 @@ button {
 #BtnConfQuest{
   background-color: rgb(31, 218, 31);
 }
+#BtnConfQuest2{
+  background-color: rgb(31, 218, 31);
+}
 #BtnCancelQuest{
   background-color: crimson;
 }

@@ -1,0 +1,16 @@
+{
+    "cursos":[
+        {
+            "id": 1 ,
+            "titulo": "introdução",
+            "quizes":[
+                {"id": 1,"quiz_id":1},
+                {"id": 2,"quiz_id":4}
+            ],
+            "conteudos":[
+                {"id": 1, "conteudo_id":2},
+                {"id": 2, "conteudo_id":5}
+            ]
+        }
+    ]
+}

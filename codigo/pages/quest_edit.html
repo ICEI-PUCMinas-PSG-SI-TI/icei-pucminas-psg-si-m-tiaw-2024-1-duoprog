@@ -41,16 +41,41 @@
             <div id="EspQuests">
                 <div class="container-fluid">
                     <div class="row">
-
-
+                        <!--<div class="questão${[i]} border-bottom mt-2">
+                            <div class="d-flex col">
+                                <button id="BtnDelQuest${[i]}"><img src="../assets/images/trash_red.png" class="" alt="" width="35"
+                                        height="auto"></button>
+                                <div class="fs-3 ms-2 d-flex justify-content-between">
+                                    <h2 class="mt-1">${objDados.dificuldades[0].fácil[i].texto}</h2>
+                                    <button id="BtnEditarPerg${[i]}" class="ms-2"><img src="../assets/images/iconizer-botao-editar.svg" class=""
+                                            alt="" width="40" height="40"></button>
+                                </div>
+                            </div>
+                            <ul>
+                                <li class="d-flex"><button id="editrespind1${i}"><img src="../assets/images/iconizer-botao-editar.svg"
+                                            class="editarResp me-2 mb-3"id="BtnEditarResp1${[i]}" alt=""></button>
+                                    <p id="respp1${i}">${objDados.dificuldades[0].fácil[i].resp[0]}</p>
+                                </li>
+                                <li class="d-flex"><button id="editrespind2${i}"><img src="../assets/images/iconizer-botao-editar.svg"
+                                            class="editarResp me-2 mb-3"id="BtnEditarResp2${[i]}" alt=""></button>
+                                    <p id="respp2${i}">${objDados.dificuldades[0].fácil[i].resp[1]}</p>
+                                </li>
+                                <li class="d-flex"><button id="editrespind3${i}"><img src="../assets/images/iconizer-botao-editar.svg"
+                                            class="editarResp me-2 mb-3"id="BtnEditarResp3${[i]}" alt=""></button>
+                                    <p id="respp3${i}">${objDados.dificuldades[0].fácil[i].resp[2]}</p>
+                                </li>
+                                <li class="d-flex"><button id="editrespind4${i}"><img src="../assets/images/iconizer-botao-editar.svg"
+                                            class="editarResp me-2 mb-3"id="BtnEditarResp4${[i]}" alt=""></button>
+                                    <p id="respp4${i}">${objDados.dificuldades[0].fácil[i].resp[3]}<p>
+                                </li>
+                            </ul>
+                        </div>-->
                     </div>
                 </div>
             </div>
             <div id="TelaAddQuest" class="border-bottom mt-2" style="display: none;">
                 <div class="d-flex col mb-2">
-                    <button class="deletar"><img src="../assets/images/trash_red.png" class="" alt="" width="35"
-                            height="auto"></button>
-                    <div class="input-group input-group-lg InputPerg">
+                    <div class="ms-4 input-group input-group-lg InputPerg">
                         <input id="InputPerg" type="text" class="form-control ms-2" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-lg">
                     </div>
@@ -84,12 +109,15 @@
                 <button class="d-flex d-block rounded-pill my-2" id="BtnConfQuest">
                     <p class="m-1 text-black">confirmar</p><img src="/assets/images/confirmation.png" alt=""
                         class="mx-1 mt-1 AddConfSimb">
-                </button>
-                <button class="d-flex d-block rounded-pill my-2" id="BtnCancelQuest">
+                </button> 
+                <div style="display: none;" id="cancelarea"><button class="d-flex d-block rounded-pill my-2" id="BtnCancelQuest">
                     <p class="m-1 text-black">cancelar</p><img src="/assets/images/cancel-button.png" alt=""
                         class="mx-1 mt-1 AddConfSimb">
-                </button>
+                </button></div>
             </div>
+
+
+
             <div style="display: block;" id="BtnAddQuestArea">
                 <button class="d-flex d-block border rounded-pill mx-auto mt-5 mb-1"
                     id="BtnAddQuest">
