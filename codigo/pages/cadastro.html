@@ -5,8 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="../assets/js/cadastro.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="../assets/css/login.css">
     
     <title>Cadastro de Usuários</title>
@@ -53,77 +58,32 @@
                     <h2 class="col-10 my- mx-auto border-bottom border-light p-0 pb-2">Cadastro</h2>
                     <div class="col-12 text-center">
                         <form id="formCadastro" class="p-0 mx-auto">
-                            <label for="txt_nome" class="col-8 text-start">Nome de Usuário: </label>
-                            <input type="text" name="txt_nome" id="txt_nome" class="col-8 border border-light rounded bg-transparent">
-                            <label for="txt_email" class="col-8 text-start">Email: </label>
-                            <input type="email" name="txt_email" id="txt_email" class="col-8 border border-light rounded bg-transparent">
-                            <label for="txt_idade" class="col-8 text-start">Idade: </label>
-                            <input type="text" name="txt_idade" id="txt_idade" class="col-8 border border-light rounded bg-transparent">
-                            <label for="txt_cidade" class="col-8 text-start">Cidade: </label>
-                            <input type="text" name="txt_cidade" id="txt_cidade" class="col-8 border border-light rounded bg-transparent">
-                            <label for="txt_senha" class="col-8 text-start">Senha:</label>
-                            <input type="password" name="txt_senha" id="txt_senha" class="col-8 border border-light rounded bg-transparent mb-1">
-                            <label for="txt_senha2" class="col-8 text-start">Confirmar senha:</label>
-                            <input type="password" name="txt_senha2" id="txt_senha2" class="col-8 border border-light rounded bg-transparent mb-1">
-                            <button type="submit" class="col-8 mt-3 btn btn-lg btn-sign-up">Cadastrar</button>
+                            <label id="label_nome" for="nome" class="col-8 text-start">Nome de Usuário: </label>
+                            <input type="text" name="nome" id="nome" class="col-8 border border-light rounded bg-transparent">
+                    
+                            <label id="label_email" for="email" class="col-8 text-start">Email: </label>
+                            <input type="email" name="email" id="email" class="col-8 border border-light rounded bg-transparent">
+                    
+                            <label id="label_idade" for="idade" class="col-8 text-start">Idade: </label>
+                            <input type="text" name="idade" id="idade" class="col-8 border border-light rounded bg-transparent">
+                    
+                            <label id="label_cidade" for="cidade" class="col-8 text-start">Cidade: </label>
+                            <input type="text" name="cidade" id="cidade" class="col-8 border border-light rounded bg-transparent">
+                    
+                            <label id="label_senha" for="senha" class="col-8 text-start">Senha:</label>
+                            <input type="password" name="senha" id="senha" class="col-8 border border-light rounded bg-transparent mb-1">
+                    
+                            <label id="label_confirmar_senha" for="confirmar_senha" class="col-8 text-start">Confirmar senha:</label>
+                            <input type="password" name="confirmar_senha" id="confirmar_senha" class="col-8 border border-light rounded bg-transparent mb-1">
+                    
+                            <button type="submit" id="cadastro" class="col-8 mt-3 btn btn-lg btn-sign-up">Cadastrar</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <script>
-        document.getElementById('formCadastro').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const nome = document.getElementById('txt_nome').value;
-    const email = document.getElementById('txt_email').value;
-    const idade = document.getElementById('txt_idade').value;
-    const cidade = document.getElementById('txt_cidade').value;
-    const senha = document.getElementById('txt_senha').value;
-    const senha2 = document.getElementById('txt_senha2').value;
-
-    if (cadastrarUsuario(nome, email, idade, cidade, senha, senha2)) {
-        if(senha == senha2) {
-            alert("Cadastro realizado com sucesso!");
-            window.location.href = 'login.html';  // Redireciona para a página de login
-        }
-        else{
-            alert("Oposição entre as senhas. Tente novamente");
-        }
-    } else {
-        alert("Erro ao cadastrar. Tente novamente.");
-    }
-});
-    function cadastrarUsuario(nome, email, idade, cidade, senha) {
-        if (!nome || !email || !idade || !cidade || !senha) {
-            alert("Todos os campos são obrigatórios!");
-            return false;
-        }
-
-        const user = {
-            nome: nome,
-            email: email,
-            senha: senha
-        };
-
-        localStorage.setItem(nome, JSON.stringify(user));
-        return true;
-    }
-    function cadastrarAdmin() {
-            if (!localStorage.getItem('admin')) {
-                const admin = {
-                    nome: 'admin',
-                    email: 'admin@example.com',
-                    idade: 30,
-                    cidade: 'BH',
-                    senha: '123',
-                    tipo: 'adm'
-                };
-                localStorage.setItem('admin', JSON.stringify(admin));
-            }
-        }
-        cadastrarAdmin();
-    </script>
+    
     <footer class="container-fluid px-5 py-2">
         <div class="row">
             <p class="col-lg-4 col-md-4 col-sm-12 m-auto p-0">Copyright - Todos os Direitos Reservados <br> &copy; 2024 </br></p>
