@@ -140,6 +140,7 @@ function Cadastrar() {
     
 }
 
+
 document.addEventListener("DOMContentLoaded", function() {
     
     document.getElementById('cadastro').onclick = Cadastrar;
