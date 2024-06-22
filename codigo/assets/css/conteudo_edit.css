@@ -79,6 +79,16 @@ button {
   background: none;
 }
 
+.buttonF{
+  background-color: #3c68ed;
+}
+.buttonM{
+  background-color: #1842c3;
+}
+.buttonD{
+  background-color: #0f329c;;
+}
+
 .editarResp {
   width: 2rem;
 }
@@ -95,7 +105,7 @@ button {
   width: 1.5rem;
 }
 
-#BtnConfQuest{
+#BtnConfConteudo{
   background-color: rgb(31, 218, 31);
 }
 #BtnConfQuest2{
