@@ -105,10 +105,7 @@ button {
   width: 1.5rem;
 }
 
-#BtnConfCurso{
-  background-color: rgb(31, 218, 31);
-}
-#BtnConfQuest2{
+#BtnConfQuest{
   background-color: rgb(31, 218, 31);
 }
 #BtnCancelQuest{

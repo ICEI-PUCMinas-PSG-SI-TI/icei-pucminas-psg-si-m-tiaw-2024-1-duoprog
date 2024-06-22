@@ -1,322 +1,82 @@
 {
-  "cursos": [
+  "questoes": [
     {
-      "id": "1",
-      "titulo": "introdução",
-      "facil": {
-        "quizes_id": [
-          "790i"
-        ],
-        "conteudos_id": [
-          16,
-          17,
-          18
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          "yiyi"
-        ],
-        "conteudos_id": [
-          13,
-          14,
-          15
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          "d67r"
-        ],
-        "conteudos_id": [
-          10,
-          11,
-          12
-        ]
-      }
+      "quiz": "quiz1",
+      "enunciado": "Qual é o operador de atribuição em C#?",
+      "respostas": [
+        "=",
+        "==",
+        "+=",
+        "*="
+      ],
+      "correta": [
+        "true",
+        "false",
+        "false",
+        "false"
+      ]
     },
     {
-      "id": "2",
-      "titulo": "condicionais",
-      "facil": {
-        "quizes_id": [
-          10,
-          11,
-          12
-        ],
-        "conteudos_id": [
-          7,
-          8,
-          9
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          13,
-          14,
-          15
-        ],
-        "conteudos_id": [
-          4,
-          5,
-          6
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          16,
-          17,
-          18
-        ],
-        "conteudos_id": [
-          1,
-          2,
-          3
-        ]
-      }
+      "quiz": "quiz2",
+      "enunciado": "qual destes tipos de variável aceita um texto?",
+      "respostas": [
+        "string",
+        "byte",
+        "int",
+        "double"
+      ],
+      "correta": [
+        "true",
+        "false",
+        "false",
+        "false"
+      ]
     },
     {
-      "id": "3",
-      "titulo": "repetição",
-      "facil": {
-        "quizes_id": [
-          1,
-          7
-        ],
-        "conteudos_id": [
-          2
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          3
-        ],
-        "conteudos_id": [
-          4
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          5
-        ],
-        "conteudos_id": [
-          6
-        ]
-      }
+      "quiz": "quiz1",
+      "enunciado": "qual destes tipos de variável aceita um texto?",
+      "respostas": [
+        "string",
+        "byte",
+        "int",
+        "double"
+      ],
+      "correta": [
+        "true",
+        "false",
+        "false",
+        "false"
+      ]
     },
     {
-      "id": "4",
-      "titulo": "vetores",
-      "facil": {
-        "quizes_id": [
-          1,
-          7
-        ],
-        "conteudos_id": [
-          2,
-          7,
-          6
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          5
-        ],
-        "conteudos_id": [
-          8
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          3,
-          7
-        ],
-        "conteudos_id": [
-          9
-        ]
-      }
-    },
-    {
-      "id": "5",
-      "titulo": "matriz",
-      "facil": {
-        "quizes_id": [
-          1,
-          7
-        ],
-        "conteudos_id": [
-          2,
-          7,
-          6
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          9,
-          7,
-          4
-        ],
-        "conteudos_id": [
-          8,
-          6
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          9
-        ],
-        "conteudos_id": [
-          1,
-          8
-        ]
-      }
-    },
-    {
-      "id": "0cde",
-      "titulo": "teste",
-      "facil": {
-        "quizes_id": [
-          9,
-          6
-        ],
-        "conteudos_id": [
-          2,
-          7,
-          6
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          9,
-          7,
-          4
-        ],
-        "conteudos_id": [
-          8,
-          6
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          5,
-          7,
-          4
-        ],
-        "conteudos_id": [
-          1,
-          8
-        ]
-      }
-    },
-    {
-      "id": "18e7",
-      "titulo": "Ensino",
-      "facil": {
-        "quizes_id": [
-          12
-        ],
-        "conteudos_id": [
-          12
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          34
-        ],
-        "conteudos_id": [
-          34
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          56
-        ],
-        "conteudos_id": [
-          56
-        ]
-      }
+      "quiz": "quiz3",
+      "enunciado": "qual destes tipos de variável aceita um texto?",
+      "respostas": [
+        "string",
+        "byte",
+        "int",
+        "double"
+      ],
+      "correta": [
+        "true",
+        "false",
+        "false",
+        "false"
+      ]
     }
   ],
-  "quizes": [
+  "cursos": [
     {
-      "id": "790i",
-      "dificuldade": "fácil",
-      "questoes": [
-        {
-          "id": "1",
-          "enunciado": "qual destes tipos de variável aceita um texto?",
-          "respostas": [
-            "string",
-            "byte",
-            "int",
-            "double"
-          ],
-          "correta": [
-            "true",
-            "false",
-            "false",
-            "false"
-          ]
-        },
-        {
-          "id": "2",
-          "enunciado": "considerando i=5 qual será o resultado de i++?",
-          "respostas": [
-            "4",
-            "3",
-            "6",
-            "10"
-          ],
-          "correta": [
-            "false",
-            "false",
-            "true",
-            "false"
-          ]
-        }
+      "nome": "intodução",
+      "quizes": [
+        "quiz1",
+        "quiz3"
       ]
     },
     {
-      "id": "yiyi",
-      "dificuldade": "médio",
-      "questoes": [
-        {
-          "id": "1",
-          "enunciado": "qual destes tipos de variável aceita um texto?",
-          "respostas": [
-            "string",
-            "byte",
-            "int",
-            "double"
-          ],
-          "correta": [
-            "true",
-            "false",
-            "false",
-            "false"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "d67r",
-      "dificuldade": "difícil",
-      "questoes": [
-        {
-          "id": "1",
-          "enunciado": "Qual é o operador de atribuição em C#?",
-          "respostas": [
-            "=",
-            "==",
-            "+=",
-            "*="
-          ],
-          "correta": [
-            "true",
-            "false",
-            "false",
-            "false"
-          ]
-        }
+      "nome": "avançado",
+      "quizes": [
+        "quiz2"
       ]
     }
   ],
