@@ -1,255 +1,335 @@
 {
-  "cursos": [
+  "questoes": [
     {
-      "id": "1",
-      "titulo": "introdução",
-      "facil": {
-        "quizes_id": [
-          "790i"
-        ],
-        "conteudos_id": [
-          16,
-          17,
-          18
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          "yiyi"
-        ],
-        "conteudos_id": [
-          13,
-          14,
-          15
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          "d67r"
-        ],
-        "conteudos_id": [
-          10,
-          11,
-          12
-        ]
-      }
+      "quiz": "quiz1",
+      "enunciado": "Qual é o operador de atribuição em C#?",
+      "respostas": [
+        "=",
+        "==",
+        "+=",
+        "*="
+      ],
+      "correta": [
+        "true",
+        "false",
+        "false",
+        "false"
+      ]
     },
     {
-      "id": "2",
-      "titulo": "condicionais",
-      "facil": {
-        "quizes_id": [
-          10,
-          11,
-          12
-        ],
-        "conteudos_id": [
-          7,
-          8,
-          9
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          13,
-          14,
-          15
-        ],
-        "conteudos_id": [
-          4,
-          5,
-          6
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          16,
-          17,
-          18
-        ],
-        "conteudos_id": [
-          1,
-          2,
-          3
-        ]
-      }
+      "quiz": "quiz2",
+      "enunciado": "qual destes tipos de variável aceita um texto?",
+      "respostas": [
+        "string",
+        "byte",
+        "int",
+        "double"
+      ],
+      "correta": [
+        "true",
+        "false",
+        "false",
+        "false"
+      ]
     },
     {
-      "id": "3",
-      "titulo": "repetição",
-      "facil": {
-        "quizes_id": [
-          1,
-          7
-        ],
-        "conteudos_id": [
-          2
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          3
-        ],
-        "conteudos_id": [
-          4
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          5
-        ],
-        "conteudos_id": [
-          6
-        ]
-      }
+      "quiz": "quiz1",
+      "enunciado": "qual destes tipos de variável aceita um texto?",
+      "respostas": [
+        "string",
+        "byte",
+        "int",
+        "double"
+      ],
+      "correta": [
+        "true",
+        "false",
+        "false",
+        "false"
+      ]
     },
     {
-      "id": "4",
-      "titulo": "vetores",
-      "facil": {
-        "quizes_id": [
-          1,
-          7
-        ],
-        "conteudos_id": [
-          2,
-          7,
-          6
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          5
-        ],
-        "conteudos_id": [
-          8
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          3,
-          7
-        ],
-        "conteudos_id": [
-          9
-        ]
-      }
-    },
-    {
-      "id": "5",
-      "titulo": "matriz",
-      "facil": {
-        "quizes_id": [
-          1,
-          7
-        ],
-        "conteudos_id": [
-          2,
-          7,
-          6
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          9,
-          7,
-          4
-        ],
-        "conteudos_id": [
-          8,
-          6
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          9
-        ],
-        "conteudos_id": [
-          1,
-          8
-        ]
-      }
-    },
-    {
-      "id": "0cde",
-      "titulo": "teste",
-      "facil": {
-        "quizes_id": [
-          9,
-          6
-        ],
-        "conteudos_id": [
-          2,
-          7,
-          6
-        ]
-      },
-      "medio": {
-        "quizes_id": [
-          9,
-          7,
-          4
-        ],
-        "conteudos_id": [
-          8,
-          6
-        ]
-      },
-      "dificil": {
-        "quizes_id": [
-          5,
-          7,
-          4
-        ],
-        "conteudos_id": [
-          1,
-          8
-        ]
-      }
+      "quiz": "quiz3",
+      "enunciado": "qual destes tipos de variável aceita um texto?",
+      "respostas": [
+        "string",
+        "byte",
+        "int",
+        "double"
+      ],
+      "correta": [
+        "true",
+        "false",
+        "false",
+        "false"
+      ]
     }
   ],
-  "quizes":[
+  "cursos": [
     {
-      "id":"790i",
-      "dificuldade":"fácil",
-      "questoes":[
+      "nome": "intodução",
+      "quizes": [
+        "quiz1",
+        "quiz3"
+      ]
+    },
+    {
+      "nome": "avançado",
+      "quizes": [
+        "quiz2"
+      ]
+    }
+  ],
+  "conteudos": [
+    {
+      "id": "licaf",
+      "dificuldade": "fácil",
+      "material": [
         {
-          "id":"1",
-          "enunciado":"qual destes tipos de variável aceita um texto?",
-          "respostas":["string", "byte", "int", "double"],
-          "correta":["true","false","false","false"]
+          "id": "1",
+          "enunciado": "qual destes tipos de variável aceita um texto?"
         },
         {
-          "id":"2",
-          "enunciado":"considerando i=5 qual será o resultado de i++?",
-          "respostas":["4", "3", "6", "10"],
-          "correta":["false","false","true","false"]
+          "id": "2",
+          "enunciado": "qual destes tipos de variável aceita um texto?"
         }
       ]
     },
     {
-      "id":"yiyi",
-      "dificuldade":"médio",
-      "questoes":[
+      "id": "oidem",
+      "dificuldade": "médio",
+      "material": [
         {
-          "id":"1",
-          "enunciado":"qual destes tipos de variável aceita um texto?",
-          "respostas":["string", "byte", "int", "double"],
-          "correta":["true","false","false","false"]
+          "id": "1",
+          "enunciado": "qual destes tipos de variável aceita um texto?"
         }
       ]
     },
     {
-      "id":"d67r",
-      "dificuldade":"difícil",
-      "questoes":[
+      "id": "licifid",
+      "dificuldade": "difícil",
+      "material": [
         {
-          "id":"1",
-          "enunciado":"Qual é o operador de atribuição em C#?",
-          "respostas":["=", "==", "+=", "*="],
-          "correta":["true","false","false","false"]
+          "id": "1",
+          "enunciado": "Qual é o operador de atribuição em C#?"
         }
       ]
+    },
+    {
+      "id": "244c",
+      "titulo": "",
+      "facil": {
+        "material": [
+          {
+            "id": 0,
+            "enunciado": ""
+          }
+        ]
+      },
+      "medio": {
+        "material": [
+          {
+            "id": 0,
+            "enunciado": ""
+          }
+        ]
+      },
+      "dificil": {
+        "material": [
+          {
+            "id": 0,
+            "enunciado": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "7288",
+      "titulo": "Ensino",
+      "facil": {
+        "material": [
+          {
+            "id": 12,
+            "enunciado": "ATSaysvdasd"
+          }
+        ]
+      },
+      "medio": {
+        "material": [
+          {
+            "id": 0,
+            "enunciado": ""
+          }
+        ]
+      },
+      "dificil": {
+        "material": [
+          {
+            "id": 0,
+            "enunciado": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "38fb",
+      "titulo": "Material",
+      "facil": {
+        "material": [
+          {
+            "id": 12,
+            "enunciado": "ATSaysvdasd"
+          },
+          {
+            "id": 16,
+            "enunciado": " 62"
+          }
+        ]
+      },
+      "medio": {
+        "material": [
+          {
+            "id": 0,
+            "enunciado": ""
+          }
+        ]
+      },
+      "dificil": {
+        "material": [
+          {
+            "id": 0,
+            "enunciado": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "9ed6",
+      "titulo": "teste",
+      "facil": {
+        "material": [
+          {
+            "id": 15,
+            "enunciado": "ATSaysvdasd"
+          },
+          {
+            "id": 32,
+            "enunciado": "987"
+          }
+        ]
+      },
+      "medio": {
+        "material": [
+          {
+            "id": 0,
+            "enunciado": ""
+          }
+        ]
+      },
+      "dificil": {
+        "material": [
+          {
+            "id": 0,
+            "enunciado": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "0af2",
+      "titulo": "teste ensino",
+      "facil": {
+        "material": [
+          {
+            "id": 56,
+            "enunciado": "asdasd"
+          },
+          {
+            "id": 87,
+            "enunciado": "efasassd"
+          }
+        ]
+      },
+      "medio": {
+        "material": [
+          {
+            "id": 76,
+            "enunciado": "adfascxdf"
+          }
+        ]
+      },
+      "dificil": {
+        "material": [
+          {
+            "id": 9,
+            "enunciado": "asdasdawwe"
+          }
+        ]
+      }
+    },
+    {
+      "id": "46bd",
+      "titulo": "teste ensino material",
+      "facil": {
+        "material": [
+          {
+            "id": 65,
+            "enunciado": "asdasd"
+          },
+          {
+            "id": 78,
+            "enunciado": "efasassd"
+          }
+        ]
+      },
+      "medio": {
+        "material": [
+          {
+            "id": 78,
+            "enunciado": "adfascxdf"
+          }
+        ]
+      },
+      "dificil": {
+        "material": [
+          {
+            "id": 30,
+            "enunciado": "asdasdawwe"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c4f4",
+      "titulo": "teste material  ensino",
+      "facil": {
+        "material": [
+          {
+            "id": 354,
+            "enunciado": "asdzx\\csad"
+          },
+          {
+            "id": 975,
+            "enunciado": "asdaxca"
+          }
+        ]
+      },
+      "medio": {
+        "material": [
+          {
+            "id": 0,
+            "enunciado": ""
+          }
+        ]
+      },
+      "dificil": {
+        "material": [
+          {
+            "id": 0,
+            "enunciado": ""
+          }
+        ]
+      }
     }
   ]
 }
