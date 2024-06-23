@@ -73,8 +73,8 @@
     {
       "id": "1",
       "nome": "intodução",
-      "descricao": "",
-      "imagem": "",
+      "descricao": "um curso para introduzir de forma simples os conceitos sobre programação",
+      "imagem": "../assets/images/acessar_curso.png",
       "quizes": [
         "quiz1",
         "quiz3"
@@ -83,8 +83,8 @@
     {
       "id": "6",
       "nome": "avançado",
-      "descricao": "",
-      "imagem": "",
+      "descricao": "para aqueles já possuem um bom conhecimento geral de programação",
+      "imagem": "../assets/images/acessar_curso.png",
       "quizes": [
         "quiz2"
       ]
