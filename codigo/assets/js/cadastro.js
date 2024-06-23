@@ -131,7 +131,7 @@ function Cadastrar() {
 
         alert('Usuário cadastrado com sucesso');
 
-        window.location.href = 'http://127.0.0.1:5501/codigo/pages/login.html';
+        window.location.href = '/pages/login.html';
 
     }
     else{

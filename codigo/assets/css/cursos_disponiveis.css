@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Importando Fonte Open Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Importando Fonte Barlow*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+
+/*Header*/
+header{
+  background-color: #141416;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+}
+
+#logo{
+  color: white;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+}
+
+.nav-item {
+  list-style: none;
+  background-color: #141416;
+  color: white;
+}
+
+.nav-item:hover {
+  background-color: #282626;
+}
+
+/*Main*/
+
+h1{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+main > section > p:nth-of-type(1){
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+main > section:nth-of-type(2) {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.card-cursos{
+  border-radius: 15px;
+  max-width: 350px;
+  max-height: 350px;
+  font-size: 10pt;
+  background: rgba(20, 20, 20, 0.9);
+}
+
+.fotos_cards_cursos{
+  width: 75px;
+}
+
+.icon_acessar_curso{
+  width: 25px;
+}
+
+.btn-entrar{
+  font-size: 10pt;
+}
+
+/*Footer*/
+
+footer{
+  background-color: #141416;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: small;
+
+  /*Trocar cor das letras*/
+}
