@@ -59,12 +59,16 @@
             <div class="row justify-content-center g-0">
                 <div class="col-sm-4">
                     <div id="card1" class="card border-2 border-secondary rounded-end-0 position-relative">
-                        <div class="card-body text-center text-white d-flex flex-column justify-content-center position-relative">
+                        <div
+                            class="card-body text-center text-white d-flex flex-column justify-content-center position-relative">
                             <div class="position-relative">
-                                <img id="user-photo" src="" alt="user photo" class="mx-auto d-block img-fluid position-relative">
+                                <img id="user-photo" src="" alt="user photo"
+                                    class="mx-auto d-block img-fluid position-relative rounded-circle" style="width: 100px; height: 100px;">
                                 <button id="btn1" type="button" class="btn border rounded-circle position-absolute">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                                        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path
+                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
                                     </svg>
                                 </button>
                             </div>
@@ -84,42 +88,45 @@
                             <p id="points-to-next-level" class="card-text"></p>
                         </div>
                     </div>
-                </div>                
-            </div>
-        </div>
-
-        <div id="editModal" class="modal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Editar Perfil</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Formulário de edição -->
-                        <form id="editForm">
-                            <label for="newPhoto">Nova Foto de Perfil:</label>
-                            <input type="file" id="newPhoto" name="newPhoto">
-        
-                            <label for="newBio">Nova Bio:</label>
-                            <textarea id="newBio" name="newBio" rows="3"></textarea>
-        
-                            <label for="newLinkedIn">Novo Link do LinkedIn:</label>
-                            <input type="text" id="newLinkedIn" name="newLinkedIn">
-        
-                            <label for="newGitHub">Novo Link do GitHub:</label>
-                            <input type="text" id="newGitHub" name="newGitHub">
-        
-                            <label for="newInstagram">Novo Link do Instagram:</label>
-                            <input type="text" id="newInstagram" name="newInstagram">
-        
-                            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
-        
+
+        <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content" id="modalContent">
+                    <form id="editForm">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Editar Perfil</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="newPhoto">Nova Foto de Perfil:</label>
+                            <input type="file" class="form-control" id="newPhoto" name="newPhoto"
+                                aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+
+                            <label class="d-block" for="newBio">Nova Bio:</label>
+                            <textarea id="newBio" name="newBio" rows="3"></textarea>
+
+                            <label class="d-block" for="newLinkedIn">Novo Link do LinkedIn:</label>
+                            <input type="text" id="newLinkedIn" name="newLinkedIn">
+
+                            <label class="d-block" for="newGitHub">Novo Link do GitHub:</label>
+                            <input type="text" id="newGitHub" name="newGitHub">
+
+                            <label class="d-block" for="newInstagram">Novo Link do Instagram:</label>
+                            <input type="text" id="newInstagram" name="newInstagram">
+
+                            <button type="submit" class="btn btn-primary d-block mt-2 mx-auto">Salvar
+                                Alterações
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer class="container-fluid px-5 py-2 mt-5">
