@@ -16,7 +16,7 @@ function FazerLogin() {
     if (validar_user) {
         
         alert('Login realizado com sucesso');
-        window.location.href = 'http://127.0.0.1:5501/codigo/pages/tela-de-cursos.html';
+        window.location.href = 'http://127.0.0.1:5501/codigo/pages/cursosDisponiveis.html';
     } else {
         
         label_nome.style.color = 'red';
