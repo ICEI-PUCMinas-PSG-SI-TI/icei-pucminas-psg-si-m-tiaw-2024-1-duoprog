@@ -1,4 +1,3 @@
-
 const urlQuestoes = 'http://localhost:3000/questoes';
 let questoes = [];
 
@@ -26,22 +25,22 @@ function loadQuestions() {
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item text-white';
         listItem.innerHTML = `
-                    <div class="my-3">
-                        <h2>${quizIndex}- ${question.enunciado}</h2>
-                        <div class="xp">
-                            <img src="../assets/images/nivel.png" class="rounded float-end me-5 img-xp" alt="img xp">
-                            <p class="float-end">+1</p>
+            <div class="my-3">
+                <h2>${quizIndex}- ${question.enunciado}</h2>
+                <div class="xp">
+                    <img src="../assets/images/nivel.png" class="rounded float-end me-5 img-xp" alt="img xp">
+                    <p class="float-end">+1</p>
+                </div>
+                <div class="ms-5 mt-3" id="${questionId}">
+                    ${question.respostas.map((resposta, i) => `
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault${index + 1}" id="flexRadioDefault${index + 1}${i}" value="${question.correta[i]}">
+                            <label class="form-check-label" for="flexRadioDefault${index + 1}${i}">${String.fromCharCode(97 + i)}) ${resposta}</label>
                         </div>
-                        <div class="ms-5 mt-3" id="${questionId}">
-                            ${question.respostas.map((resposta, i) => `
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault${index + 1}" id="flexRadioDefault${index + 1}${i}" value="${question.correta[i]}">
-                                    <label class="form-check-label" for="flexRadioDefault${index + 1}${i}">${String.fromCharCode(97 + i)}) ${resposta}</label>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                `;
+                    `).join('')}
+                </div>
+            </div>
+        `;
         quizList.appendChild(listItem);
         quizIndex++;
     });
@@ -69,13 +68,13 @@ function coletarValores() {
 
     if (condicaoModal !== false) {
         document.getElementById('resultado').innerHTML = `
-                    <p>As respostas corretas eram:<br>${questoes.map((question, index) => `
-                        ${index + 1}- ${question.enunciado}<br>${question.respostas.map((resposta, i) => `
-                            ${String.fromCharCode(97 + i)}) ${resposta} ${question.correta[i] === 'true' ? '<strong>(correta)</strong>' : ''}`).join('<br>')}
-                    `).join('<br>')}
-                    <p><strong>Sua quantidade de acertos foi: ${acertos}</strong></p>
-                    <p><strong>Você conseguiu +${xps} XP !</strong></p>
-                `;
+            <p>As respostas corretas eram:<br>${questoes.map((question, index) => `
+                ${index + 1}- ${question.enunciado}<br>${question.respostas.map((resposta, i) => `
+                    ${String.fromCharCode(97 + i)}) ${resposta} ${question.correta[i] === 'true' ? '<strong>(correta)</strong>' : ''}`).join('<br>')}
+            `).join('<br>')}
+            <p><strong>Sua quantidade de acertos foi: ${acertos}</strong></p>
+            <p><strong>Você conseguiu +${xps} XP !</strong></p>
+        `;
 
         localStorage.setItem('quizResults', JSON.stringify({ acertos: acertos, xps: xps }));
         condicaoModal = true;
@@ -93,10 +92,10 @@ function verificarResultadosAnteriores() {
     if (resultados) {
         const parsedResults = JSON.parse(resultados);
         document.getElementById('resultado').innerHTML = `
-                    <p><strong>Você já respondeu esse quiz.</strong></p>
-                    <p><strong>Sua quantidade de acertos foi: ${parsedResults.acertos}</strong></p>
-                    <p><strong>Você conseguiu +${parsedResults.xps} XP !</strong></p>
-                `;
+            <p><strong>Você já respondeu esse quiz.</strong></p>
+            <p><strong>Sua quantidade de acertos foi: ${parsedResults.acertos}</strong></p>
+            <p><strong>Você conseguiu +${parsedResults.xps} XP !</strong></p>
+        `;
         condicaoModal = true;
         abrirModal();
 
