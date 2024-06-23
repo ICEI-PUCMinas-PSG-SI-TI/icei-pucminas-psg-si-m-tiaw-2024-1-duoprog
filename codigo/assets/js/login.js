@@ -1,53 +1,43 @@
 function FazerLogin() {  
 
-    let nome = document.querySelector('#nome');
-    let label_nome = document.querySelector('#label_nome');
+    let nome = document.querySelector('#nome').value.trim();
+    let label_nome = document.querySelector('label[for="nome"]');
 
-    let email = document.querySelector('#email');
-    let label_email = document.querySelector('#label_email');
+    let email = document.querySelector('#email').value.trim();
+    let label_email = document.querySelector('label[for="email"]');
 
-    let senha = document.querySelector('#senha');
-    let label_senha = document.querySelector('#label_senha');
+    let senha = document.querySelector('#senha').value.trim();
+    let label_senha = document.querySelector('label[for="senha"]');
 
-    let listaUser = [];
+    let listaUser = JSON.parse(localStorage.getItem('listaUser')) || [];
 
-    let validar_user = {
-        nome: '',
-        email: '',
-        senha: ''
-    }
+    let validar_user = listaUser.find(user => user.nomeJson === nome && user.emailJson === email && user.senhaJson === senha);
 
-    listaUser = JSON.parse(localStorage.getItem('listaUser'));
+    if (validar_user) {
+        
+        
+        if(nome == 'userAdmin' && senha == '123456' && email == 'userAdmin@gmail.com'){
 
-    listaUser.FazerLogin((item) => {
-        if(nome.value == item.nomeJson && email.value == item.emailJson && senha.value == item.senhaJson){
-            validar_user = {
-                nome: item.nomeJson,
-                email: item.emailJson,
-                senha: item.senhaJson
-            }
-
+            window.location.assign('/pages/cursos_regis.html');
         }
-    })
+        else{
+            window.location.href = '/pages/cursos_disponiveis.html'}
 
-    if(nome.value == validar_user.nome && email.value == validar_user.email && senha.value == validar_user.senha){
-        //levar para a tela se cursos com window.location.ref
-        alert('deu bom')
-    }else{
-        label_nome.setAttribute('style', 'color: red');
-        nome.setAttribute('style', 'border-color: red');
+    } else {
+        
+        label_nome.style.color = 'red';
+        document.querySelector('#nome').style.borderColor = 'red';
 
-        label_email.setAttribute('style', 'color: red');
-        email.setAttribute('style', 'border-color: red');
+        label_email.style.color = 'red';
+        document.querySelector('#email').style.borderColor = 'red';
 
-        label_senha.setAttribute('style', 'color: red');
-        senha.setAttribute('style', 'border-color: red');
+        label_senha.style.color = 'red';
+        document.querySelector('#senha').style.borderColor = 'red';
 
-        alert('Usuário, Senha, ou Email incorretos');
+        alert('Usuário, Senha ou Email incorretos');
     }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    
-    document.getElementById('entrar').onclick = FazerLogin;
+    document.getElementById('formLogin').addEventListener('submit', FazerLogin);
 });

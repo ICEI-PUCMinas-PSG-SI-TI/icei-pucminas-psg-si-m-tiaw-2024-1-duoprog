@@ -1,11 +1,15 @@
 const urlconteudos = 'http://localhost:3000/conteudos';
 let conteudos = [];
+let ultimoId = 0;
 
 function carregaDadosJSONServer(func) {
     fetch(urlconteudos)
         .then(response => response.json())
         .then(dados => {
             conteudos = dados;
+            if (conteudos.length > 0) {
+                ultimoId = Math.max(...conteudos.map(conteudo => conteudo.id));
+            }
             func();
         })
         .catch(error => console.error('Erro ao carregar dados:', error));
@@ -16,16 +20,6 @@ function carregadados() {
     let strTextoHTML = '';
 
     conteudos.forEach(conteudo => {
-        let contFacil = conteudo.facil && conteudo.facil.material
-                        ? conteudo.facil.material.map(mat => `id: ${mat.id}, enunciado: ${mat.enunciado}`).join('<br>') 
-                        : 'Sem conteúdos fáceis';
-        let contMedio = conteudo.medio && conteudo.medio.material
-                        ? conteudo.medio.material.map(mat => `id: ${mat.id}, enunciado: ${mat.enunciado}`).join('<br>') 
-                        : 'Sem conteúdos médios';
-        let contDificil = conteudo.dificil && conteudo.dificil.material
-                        ? conteudo.dificil.material.map(mat => `id: ${mat.id}, enunciado: ${mat.enunciado}`).join('<br>') 
-                        : 'Sem conteúdos difíceis';
-
         strTextoHTML += `
 <div id="conteudo_${conteudo.id}" class="py-3">
     <div class="d-flex col">
@@ -34,36 +28,19 @@ function carregadados() {
             <button id="BtnDelconteudo${conteudo.id}" class="ms-5 pb-1"><img src="../assets/images/trash_red.png" alt="" width="40" height="40"></button>
         </div>
     </div>
-    <h2>conteúdo: ${conteudo.titulo}</h2>
+    <h2>Conteúdo: ${conteudo.nome}</h2>
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed text-white buttonF" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne${conteudo.id}" aria-expanded="false" aria-controls="flush-collapseOne${conteudo.id}">
-                    Fácil
+                    Detalhes
                 </button>
             </h2>
             <div id="flush-collapseOne${conteudo.id}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body"><strong>conteúdos:</strong> <br>conteúdo: ${contFacil}</div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed text-white buttonM" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo${conteudo.id}" aria-expanded="false" aria-controls="flush-collapseTwo${conteudo.id}">
-                    Médio
-                </button>
-            </h2>
-            <div id="flush-collapseTwo${conteudo.id}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body"><strong>conteúdos:</strong> <br>conteúdo: ${contMedio}</div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed text-white buttonD" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree${conteudo.id}" aria-expanded="false" aria-controls="collapseThree${conteudo.id}">
-                    Difícil
-                </button>
-            </h2>
-            <div id="collapseThree${conteudo.id}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body"><strong>conteúdos:</strong> <br>conteúdo: ${contDificil}</div>
+                <div class="accordion-body">
+                    <strong>Enunciado:</strong> <br>${conteudo.enunciado || 'Não disponível'}<br>
+                    <strong>Link:</strong> <br>${conteudo.link ? `<a href="${conteudo.link}" target="_blank">${conteudo.link}</a>` : 'Não disponível'}
+                </div>
             </div>
         </div>
     </div>
@@ -80,30 +57,21 @@ function carregadados() {
 }
 
 document.getElementById('BtnConfConteudo').addEventListener('click', function() {
-    let novoTitulo = document.getElementById('InputTitulo').value;
-    let novoConteudoFid = document.getElementById('InputContFid').value.split('---').map(Number).filter(id => !isNaN(id));
-    let novoConteudoFen = document.getElementById('InputContFen').value.split('---');
-    let novoConteudoMid = document.getElementById('InputContMid').value.split('---').map(Number).filter(id => !isNaN(id));
-    let novoConteudoMen = document.getElementById('InputContMen').value.split('---');
-    let novoConteudoDid = document.getElementById('InputContDid').value.split('---').map(Number).filter(id => !isNaN(id));
-    let novoConteudoDen = document.getElementById('InputContDen').value.split('---');
+    let nome = document.getElementById('InputNome').value;
+    let enunciado = document.getElementById('InputEnunciado').value || '';
+    let link = document.getElementById('InputLink').value || '';
 
-    if (!novoTitulo || novoConteudoFid.length !== novoConteudoFen.length || novoConteudoMid.length !== novoConteudoMen.length || novoConteudoDid.length !== novoConteudoDen.length) {
-        alert('Erro: Verifique se todos os campos estão preenchidos corretamente e se o número de IDs corresponde ao número de enunciados.');
+    if (!nome) {
+        alert('Por favor, preencha o campo de nome.');
         return;
     }
 
-    let novoConteudoObj = {
-        titulo: novoTitulo,
-        facil: {
-            material: novoConteudoFid.map((id, index) => ({ id: id, enunciado: novoConteudoFen[index] }))
-        },
-        medio: {
-            material: novoConteudoMid.map((id, index) => ({ id: id, enunciado: novoConteudoMen[index] }))
-        },
-        dificil: {
-            material: novoConteudoDid.map((id, index) => ({ id: id, enunciado: novoConteudoDen[index] }))
-        }
+    let novoId = ++ultimoId;
+    let novoConteudo = {
+        id: novoId,
+        nome: nome,
+        enunciado: enunciado,
+        link: link
     };
 
     fetch(urlconteudos, {
@@ -111,7 +79,7 @@ document.getElementById('BtnConfConteudo').addEventListener('click', function() 
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(novoConteudoObj),
+        body: JSON.stringify(novoConteudo),
     })
     .then(response => response.json())
     .then(data => {
