@@ -70,7 +70,7 @@ function TrocarSenha() {
                 usuarioEncontrado.senhaJson = senha;
                 localStorage.setItem('listaUser', JSON.stringify(listaUser));
                 alert('Senha alterada com sucesso');
-                window.location.href = 'login.html';
+                window.location.href = '/pages/login.html';
             } else {
                
                 label_senha.style.color = 'red';

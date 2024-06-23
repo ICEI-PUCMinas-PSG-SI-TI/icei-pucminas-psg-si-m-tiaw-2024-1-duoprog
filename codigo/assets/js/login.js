@@ -15,8 +15,14 @@ function FazerLogin() {
 
     if (validar_user) {
         
-        alert('Login realizado com sucesso');
-        window.location.href = 'http://127.0.0.1:5501/codigo/pages/cursosDisponiveis.html';
+        
+        if(nome == 'userAdmin' && senha == '123456' && email == 'userAdmin@gmail.com'){
+
+            window.location.assign('/pages/cursos_regis.html');
+        }
+        else{
+            window.location.href = '/pages/cursos_disponiveis.html'}
+
     } else {
         
         label_nome.style.color = 'red';
