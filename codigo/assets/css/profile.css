@@ -105,6 +105,10 @@ body > main > h1{
   border-radius: 100%;
 }
 
+#modalContent {
+  background-color: #04087d;
+}
+
 /*Footer*/
 
 footer{
