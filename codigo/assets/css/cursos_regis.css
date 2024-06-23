@@ -105,11 +105,17 @@ button {
   width: 1.5rem;
 }
 
+#BtnConfCurso{
+  background-color: rgb(31, 218, 31);
+}
 #BtnConfQuest{
   background-color: rgb(31, 218, 31);
 }
 #BtnCancelQuest{
   background-color: crimson;
+}
+#jaExiste li {
+  color: rgb(181, 189, 255);
 }
 
 #BtnAddQuest {

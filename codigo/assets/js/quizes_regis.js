@@ -26,6 +26,9 @@ let params = new URLSearchParams(location.search)
 let curso_nome = params.get('id')
 
 function carregaDados() {
+
+  let titulo = document.getElementById('titulo');
+  titulo.innerHTML = curso_nome;
   let tela = document.getElementById('tela');
   let strTextoHTML = '';
   let quizesExibidos = [];
