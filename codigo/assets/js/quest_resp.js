@@ -44,33 +44,33 @@ function carregaDados() {
         <li class="d-flex">
             <p class="fs-4" id="">
                 ${questoes[i].respostas[0]}</p>
-                                            <div class="form-check col-md-7 pt-2">
+                                            <div class="ms-3 form-check col-md-7 pt-2">
     <input class="form-check-input" type="radio" name="flexRadioDefault${i}"
-        id="option${questoes[i].id}${i}" value="${questoes[i].correta[0]}">
+        id="op1${i}" value="${questoes[i].correta[0]}">
 </div>
         </li>
         <li class="d-flex">
             <p class="fs-4" id="">
                 ${questoes[i].respostas[1]}</p>
-                                            <div class="form-check col-md-7 pt-2">
+                                            <div class="ms-3 form-check col-md-7 pt-2">
     <input class="form-check-input" type="radio" name="flexRadioDefault${i}"
-        id="option${questoes[i].id}${i}" value="${questoes[i].correta[1]}">
+        id="op2${i}" value="${questoes[i].correta[1]}">
 </div>
         </li>
         <li class="d-flex">
             <p class="fs-4" id="">
                 ${questoes[i].respostas[2]}</p>
-                                            <div class="form-check col-md-7 pt-2">
+                                            <div class="ms-3 form-check col-md-7 pt-2">
     <input class="form-check-input" type="radio" name="flexRadioDefault${i}"
-        id="option${questoes[i].id}${i}" value="${questoes[i].correta[2]}">
+        id="op3${i}" value="${questoes[i].correta[2]}">
 </div>
         </li>
         <li class="d-flex">
             <p class="fs-4" id="">
                 ${questoes[i].respostas[3]}</p>
-                                           <div class="form-check col-md-7 pt-2">
+                                           <div class="ms-3 form-check col-md-7 pt-2">
     <input class="form-check-input" type="radio" name="flexRadioDefault${i}"
-        id="option${questoes[i].id}${i}" value="${questoes[i].correta[3]}">
+        id="op4${i}" value="${questoes[i].correta[3]}">
 </div>
         </li>
     </ul>
@@ -82,21 +82,16 @@ function carregaDados() {
 carregaDadosJSONServer (carregaDados)
 carregaDadosJSONServer2 (carregaDados)
 
-// Inicialize o contador
-// Inicialize o contador
-let contador = 0;
-
-// Adicione um evento de clique aos form-check-inputs
-document.querySelectorAll('.form-check-input').forEach((input) => {
-    input.addEventListener('click', () => {
-        // Verifique se a resposta selecionada é correta
-        if (input.value === 'correta') {
-            contador++; // Incremente o contador
+var resultado = 0;
+document.getElementById("BtnConfCurso").addEventListener("click", function() {
+    const formCheckInputs = document.querySelectorAll(".form-check-input");
+    formCheckInputs.forEach(function(input) {
+        if (input.value === "correta" && input.checked) {
+            resultado++;
         }
     });
-});
-
-// Adicione um evento de clique ao botão de resultado
-document.getElementById('BtnConfCurso').addEventListener('click', () => {
-    console.log(`Resultado final: ${contador} respostas corretas.`);
+    let tela = document.getElementById('tela');
+    strresultado = '';
+    strresultado += `<div><p class="text-center fs-1">resultado: ${resultado}</p><br><p class="text-center fs-1">voltar para <a href="">cursos</a></p></div>`
+    tela.innerHTML = strresultado;
 });

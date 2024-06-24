@@ -39,40 +39,13 @@
         <h1 class="text-center mb-0 p-5 border-bottom text-decoration-underline" id="titulo">quiz xxxx</h1>
         <div id="corpo" class="px-3 py-2 border border-top-0 border-bottom-0">
             <div id="EspQuests">
-                <div class="container-fluid">
+                <div id="resultado" class="container-fluid">
                     <div id="tela" class="row">
 
 
-                        <div class="questão${quizes[idlink].questoes.id} border-bottom mt-2">
-                            <div class="d-flex col">
-                                <button id="BtnDelQuest${i}"><img src="../assets/images/trash_red.png" class="" alt=""
-                                        width="35" height="auto"></button>
-                                <div class="fs-3 ms-2 d-flex justify-content-between">
-                                    <h2 class="mt-1">${quizes[idlink].questoes[i].enunciado}</h2>
-                                    <button id="BtnEditarPerg${[i]}" class="ms-2"><img
-                                            src="../assets/images/iconizer-botao-editar.svg" class="" alt="" width="40"
-                                            height="40"></button>
-                                </div>
-                            </div>
-                            <ul>
-                                <li class="d-flex">
-                                    <p class="fs-4" id="${quizes[idlink].questoes[i].correta[0]}">
-                                        ${quizes[idlink].questoes[i].respostas[0]}</p>
-                                </li>
-                                <li class="d-flex">
-                                    <p class="fs-4" id="${quizes[idlink].questoes[i].correta[1]}">
-                                        ${quizes[idlink].questoes[i].respostas[1]}</p>
-                                </li>
-                                <li class="d-flex">
-                                    <p class="fs-4" id="${quizes[idlink].questoes[i].correta[2]}">
-                                        ${quizes[idlink].questoes[i].respostas[2]}</p>
-                                </li>
-                                <li class="d-flex">
-                                    <p class="fs-4" id="${quizes[idlink].questoes[i].correta[3]}">
-                                        ${quizes[idlink].questoes[i].respostas[3]}</p>
-                                </li>
-                            </ul>
-                        </div>
+<div><p class="text-center fs-1">resultao: 5</p><br><p class="text-center fs-1">voltar para <a href="">cursos</a></p></div>
+
+
                     </div>
                     <button class="d-flex d-block rounded-pill my-2" id="BtnConfCurso">
                         <p class="m-1 text-black">confirmar</p><img src="../assets/images/confirmation.png" alt=""
