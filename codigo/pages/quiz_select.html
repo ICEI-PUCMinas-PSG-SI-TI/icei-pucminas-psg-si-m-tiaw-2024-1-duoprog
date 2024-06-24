@@ -12,7 +12,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <script src="../assets/js/cursos_disponiveis.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -51,12 +51,10 @@
         
             <div class="col-lg-4 col-md-6 col-sm-12 border text-center card-cursos mb-5 mt-3 mx-2">
                 <div class="d-flex justify-content-end">
-                    <img src="${cursos[i].imagem}" alt="" class="icon_acessar_curso mt-2">
                 </div>
                 <a href="quest_resp.html"><p class="btn-entrar text-end mb-0">Entrar</p></a>
                 <img src="../assets/images/algoritmo.png" alt="" class="fotos_cards_cursos img-fluid mb-3">
-                <h3 class="border-bottom pb-3 mb-3">${cursos[i].nome}</h3>
-                <p>${cursos[i].descricao}</p>
+                <h3 class="border-bottom pb-3 mb-3">${questoes[i].quiz}</h3>
             </div>
 
 
@@ -81,7 +79,8 @@
             </div>
         </div>
     </footer>
-    <script src="cursos_disponiveis.js"></script>
+    
 
 </body>
+<script src="../assets/js/quiz_select.js"></script>
 </html>

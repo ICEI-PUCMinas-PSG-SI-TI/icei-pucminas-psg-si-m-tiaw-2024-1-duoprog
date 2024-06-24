@@ -20,7 +20,7 @@ function carregadados(){
                 <div class="d-flex justify-content-end">
                     <img src="${cursos[i].imagem}" alt="" class="icon_acessar_curso mt-2">
                 </div>
-                <a href=""><p class="btn-entrar text-end mb-0">Entrar</p></a>
+                <a href="quiz_select.html?id=${cursos[i].nome}"><p class="btn-entrar text-end mb-0">Entrar</p></a>
                 <img src="../assets/images/algoritmo.png" alt="" class="fotos_cards_cursos img-fluid mb-3">
                 <h3 class="border-bottom pb-3 mb-3">${cursos[i].nome}</h3>
                 <p>${cursos[i].descricao}</p>
