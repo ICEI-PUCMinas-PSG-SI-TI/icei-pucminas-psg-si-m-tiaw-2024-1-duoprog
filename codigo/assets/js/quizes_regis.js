@@ -1,3 +1,8 @@
+if(localStorage.getItem('token') == null){
+    alert('Esteja logado com seu usuário para acessar essa página')
+    window.location.href = 'index.html';
+}
+
 const urlQuestoes = 'http://localhost:3000/questoes'
 let questoes = []
 const urlCursos = 'http://localhost:3000/cursos'
@@ -54,7 +59,15 @@ function carregaDados() {
   tela.innerHTML = strTextoHTML;
 }
 
-
 carregaDadosJSONServer1(carregaDados);
 carregaDadosJSONServer2(carregaDados);
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    function Sair(){
+        localStorage.removeItem('token');
+        window.location.href = 'index.html';
+    }
+
+    const botao = document.getElementById('sair');
+    botao.addEventListener('click', Sair);
+});

@@ -1,3 +1,8 @@
+if(localStorage.getItem('token') == null){
+    alert('Esteja logado com seu usuário para acessar essa página')
+    window.location.href = 'index.html';
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     carregaDados();
 });
@@ -21,3 +26,13 @@ function carregaDados() {
         })
         .catch(error => console.error('Error fetching repository data:', error));
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    function Sair(){
+        localStorage.removeItem('token');
+        window.location.href = 'index.html';
+    }
+
+    const botao = document.getElementById('sair');
+    botao.addEventListener('click', Sair);
+});

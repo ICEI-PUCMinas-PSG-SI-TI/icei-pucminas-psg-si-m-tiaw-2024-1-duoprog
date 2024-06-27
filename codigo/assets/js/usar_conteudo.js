@@ -1,6 +1,14 @@
+if(localStorage.getItem('token') == null){
+    alert('Esteja logado com seu usuário para acessar essa página')
+    window.location.href = 'index.html';
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
+
+    const botao = document.getElementById('sair');
+    botao.addEventListener('click', Sair);
 
     fetch(`http://localhost:3000/conteudos/${id}`)
         .then(response => {
@@ -27,4 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error('Erro ao buscar dados do conteúdo:', error);
             document.getElementById('info').innerHTML = `<p>Erro ao carregar dados do conteúdo: ${error.message}</p>`;
         });
+
+    function Sair(){
+        localStorage.removeItem('token');
+        window.location.href = 'index.html';
+    }
 });

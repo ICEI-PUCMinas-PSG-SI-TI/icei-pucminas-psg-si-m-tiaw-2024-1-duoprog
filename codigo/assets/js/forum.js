@@ -1,3 +1,9 @@
+if(localStorage.getItem('token') == null){
+    alert('Esteja logado com seu usuário para acessar essa página')
+    window.location.href = 'index.html';
+}
+
+
 document.addEventListener("DOMContentLoaded", function() {
 
     const postForm = document.getElementById("postForm");
@@ -40,5 +46,15 @@ function EnviarPosts(post) {
     }
 }
 
-// Puxar os posts ao carregar a página
-document.addEventListener("DOMContentLoaded", PuxarPosts);
+document.addEventListener('DOMContentLoaded', (event) => {
+    
+    PuxarPosts();
+
+    function Sair(){
+        localStorage.removeItem('token');
+        window.location.href = 'index.html';
+    }
+
+    const botao = document.getElementById('sair');
+    botao.addEventListener('click', Sair);
+});

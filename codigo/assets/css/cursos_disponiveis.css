@@ -84,7 +84,8 @@ footer{
   background-color: #141416;
   font-family: 'Barlow', sans-serif;
   font-weight: 500;
-  font-size: small;
+  font-size: small;  
+  color: white;
 
   /*Trocar cor das letras*/
 }
