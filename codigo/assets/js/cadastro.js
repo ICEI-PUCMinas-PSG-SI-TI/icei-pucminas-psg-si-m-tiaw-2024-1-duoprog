@@ -113,6 +113,9 @@ confirmar_senha.addEventListener('keyup', () => {
 })
 
 function Cadastrar() {  
+
+    event.preventDefault();
+
     if(validar_nome && validar_email && validar_idade && validar_cidade && validar_senha && validar_confirmar_senha){
 
         let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
@@ -131,7 +134,7 @@ function Cadastrar() {
 
         alert('Usuário cadastrado com sucesso');
 
-        window.location.href = '/pages/login.html';
+        window.location.href = 'login.html';
 
     }
     else{
