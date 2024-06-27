@@ -1,5 +1,7 @@
 function FazerLogin() {  
 
+    event.preventDefault();
+
     let nome = document.querySelector('#nome').value.trim();
     let label_nome = document.querySelector('label[for="nome"]');
 
@@ -18,10 +20,11 @@ function FazerLogin() {
         
         if(nome == 'userAdmin' && senha == '123456' && email == 'userAdmin@gmail.com'){
 
-            window.location.assign('/pages/cursos_regis.html');
+            window.location.href = 'cursos_regis.html';
         }
         else{
-            window.location.href = '/pages/cursos_disponiveis.html'}
+            window.location.href = 'cursos_disponiveis.html'
+        }
 
     } else {
         

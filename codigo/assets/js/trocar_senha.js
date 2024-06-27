@@ -57,11 +57,11 @@ confirmar_senha.addEventListener('keyup', () => {
 })
 
 function TrocarSenha() {
+    event.preventDefault();
+
     if(validar_email && validar_senha && validar_confirmar_senha){
     
         let listaUser = JSON.parse(localStorage.getItem('listaUser')) || [];
-
-        console.log(listaUser);
 
         let usuarioEncontrado = listaUser.find(user => user.emailJson === email);
 
@@ -70,7 +70,7 @@ function TrocarSenha() {
                 usuarioEncontrado.senhaJson = senha;
                 localStorage.setItem('listaUser', JSON.stringify(listaUser));
                 alert('Senha alterada com sucesso');
-                window.location.href = '/pages/login.html';
+                window.location.href = 'login.html';
             } else {
                
                 label_senha.style.color = 'red';
