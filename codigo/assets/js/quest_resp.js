@@ -92,6 +92,6 @@ document.getElementById("BtnConfCurso").addEventListener("click", function() {
     });
     let tela = document.getElementById('tela');
     strresultado = '';
-    strresultado += `<div><p class="text-center fs-1">resultado: ${resultado}</p><br><p class="text-center fs-1">voltar para <a href="">cursos</a></p></div>`
+    strresultado += `<div><p class="text-center fs-1">resultado: ${resultado}</p><br><p class="text-center fs-1">voltar para <a href="cursos_disponiveis.html">cursos</a></p></div>`
     tela.innerHTML = strresultado;
 });
