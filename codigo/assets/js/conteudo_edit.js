@@ -1,3 +1,8 @@
+if(localStorage.getItem('token') == null){
+    alert('Esteja logado com seu usuário para acessar essa página')
+    window.location.href = 'index.html';
+}
+
 const urlconteudos = 'http://localhost:3000/conteudos';
 let conteudos = [];
 let ultimoId = 0;
@@ -108,3 +113,13 @@ function deletaConteudo(id) {
 }
 
 carregaDadosJSONServer(carregadados);
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    function Sair(){
+        localStorage.removeItem('token');
+        window.location.href = 'index.html';
+    }
+
+    const botao = document.getElementById('sair');
+    botao.addEventListener('click', Sair);
+});

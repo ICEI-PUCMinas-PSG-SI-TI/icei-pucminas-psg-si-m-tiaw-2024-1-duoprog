@@ -1,3 +1,8 @@
+if(localStorage.getItem('token') == null){
+    alert('Esteja logado com seu usuário para acessar essa página')
+    window.location.href = 'index.html';
+}
+
 const urlquestoes = 'http://localhost:3000/questoes'
 let questoes = []
 const urlCursos = 'http://localhost:3000/cursos'
@@ -94,4 +99,16 @@ document.getElementById("BtnConfCurso").addEventListener("click", function() {
     strresultado = '';
     strresultado += `<div><p class="text-center fs-1">resultado: ${resultado}</p><br><p class="text-center fs-1">voltar para <a href="cursos_disponiveis.html">cursos</a></p></div>`
     tela.innerHTML = strresultado;
+});
+
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    function Sair(){
+        localStorage.removeItem('token');
+        window.location.href = 'index.html';
+    }
+
+    const botao = document.getElementById('sair');
+    botao.addEventListener('click', Sair);
 });

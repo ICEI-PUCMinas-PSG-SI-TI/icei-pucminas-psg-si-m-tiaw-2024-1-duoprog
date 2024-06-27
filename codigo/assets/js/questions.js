@@ -1,3 +1,8 @@
+if(localStorage.getItem('token') == null){
+    alert('Esteja logado com seu usuário para acessar essa página')
+    window.location.href = 'index.html';
+}
+
 const urlQuestoes = 'http://localhost:3000/questoes';
 let questoes = [];
 
@@ -105,4 +110,14 @@ function verificarResultadosAnteriores() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', fetchQuestions);
+document.addEventListener('DOMContentLoaded', (event) => {
+    fetchQuestions();
+    
+    function Sair(){
+        localStorage.removeItem('token');
+        window.location.href = 'index.html';
+    }
+
+    const botao = document.getElementById('sair');
+    botao.addEventListener('click', Sair);
+});

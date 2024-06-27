@@ -1,3 +1,8 @@
+if(localStorage.getItem('token') == null){
+    alert('Esteja logado com seu usuário para acessar essa página')
+    window.location.href = 'index.html';
+}
+
 const urlCursos = 'http://localhost:3000/cursos'
 let cursos = []
 
@@ -28,4 +33,16 @@ function carregadados(){
                 }
             tela.innerHTML = strTextoHTML;
 }
+
 carregaDadosJSONServer (carregadados)
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    function Sair(){
+        localStorage.removeItem('token');
+        window.location.href = 'index.html';
+    }
+
+    const botao = document.getElementById('sair');
+    botao.addEventListener('click', Sair);
+});

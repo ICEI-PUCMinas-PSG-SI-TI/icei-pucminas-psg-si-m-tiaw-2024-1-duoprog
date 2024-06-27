@@ -2,6 +2,8 @@ function FazerLogin() {
 
     event.preventDefault();
 
+    let token;
+
     let nome = document.querySelector('#nome').value.trim();
     let label_nome = document.querySelector('label[for="nome"]');
 
@@ -17,6 +19,8 @@ function FazerLogin() {
 
     if (validar_user) {
         
+        token = Math.random().toString(16).substr(2);
+        localStorage.setItem('token', token);
         
         if(nome == 'userAdmin' && senha == '123456' && email == 'userAdmin@gmail.com'){
 

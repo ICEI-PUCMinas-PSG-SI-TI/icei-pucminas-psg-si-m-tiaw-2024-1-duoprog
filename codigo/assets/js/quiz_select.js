@@ -1,3 +1,8 @@
+if(localStorage.getItem('token') == null){
+    alert('Esteja logado com seu usuário para acessar essa página')
+    window.location.href = 'index.html';
+}
+
 const urlQuestoes = 'http://localhost:3000/questoes'
 let questoes = []
 const urlCursos = 'http://localhost:3000/cursos'
@@ -57,4 +62,12 @@ function carregaDados() {
 carregaDadosJSONServer1(carregaDados);
 carregaDadosJSONServer2(carregaDados);
 
-//<h2><a href="quiz_to_quest.html?id=${questoes[i].quiz}">${questoes[i].quiz}</a></h2>
+document.addEventListener('DOMContentLoaded', (event) => {
+    function Sair(){
+        localStorage.removeItem('token');
+        window.location.href = 'index.html';
+    }
+
+    const botao = document.getElementById('sair');
+    botao.addEventListener('click', Sair);
+});
